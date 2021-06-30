@@ -9,7 +9,7 @@ from IPython.display import display, clear_output
 from ipywidgets import interactive, interactive
 from datetime import datetime, date, time
 
-st.title('Sales Prediction-RealWare')
+st.title('Sales Prediction')
 
 #Cleaning the csv before the analysis
 df=pd.read_excel('RW_2016-2021_WS.xlsx')
