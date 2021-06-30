@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import ipywidgets as wd
 from IPython.display import display, clear_output
 from ipywidgets import interactive, interactive
+from datetime import datetime, date, time
 
 st.title('Sales Prediction-RealWare')
 
@@ -141,3 +142,19 @@ fig3.update_layout(showlegend=True,height=500, width=1500,title_text="Sales vs F
 
 # Plot!
 st.plotly_chart(fig3, use_container_width=True)
+
+#Forecasting numbers
+
+st.title('Next 12 month forecasts')
+
+forecast=pd.DataFrame(fc_series)
+forecast.reset_index(inplace=True)
+forecast.columns=[['Date', 'Sales Forecast']]
+
+fmt = "%d-%m-%Y"
+styler = forecast.style.format(
+    {
+        "Date": lambda t: t.datetime.date,
+    }
+)
+st.table(styler)
