@@ -27,9 +27,9 @@ df.reset_index(drop=True, inplace=True) #reset the index
 
 if st.checkbox('Preview Dataset'):
     data=df
-if st.button('Head'):
+if st.button('First 10 rows (Head)'):
     st.write(data.head(10))
-if st.button('Tail'):
+if st.button('Last 10 rows (Tail)'):
     st.write(data.tail(10))
 
 # Selecting the region nad category for the anlysis   
