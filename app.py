@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
